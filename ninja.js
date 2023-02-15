@@ -20,3 +20,22 @@ const ninjadou = new Ninja ("dou",10);
 ninjadou.showStats();
 ninjadou.drinkSake();
 ninjadou.showStats();
+
+class sensei extends Ninja {
+    constructor(sabiduria){
+        super(sabiduria);
+        this.salud= 200;  
+        this.fuerza = 10;
+        this.velocidad = 10;
+        this.sabiduria= 10;
+        }
+    speakWisdom(){
+        this.drinkSake();
+        console.log("Lo que un programador puede hacer en un mes, dos programadores pueden hacerlo en dos meses")
+    }
+}
+
+const superSensei = new sensei ("Master Splinter");
+superSensei.showStats();
+superSensei.speakWisdom();
+superSensei.showStats();
